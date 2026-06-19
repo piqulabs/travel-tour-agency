@@ -203,7 +203,7 @@ export default function CustomTrip() {
                         </div>
                         <Button type="submit" size="lg" className="w-full">
                           <Send className="size-4" />
-                          Minta Itinerary via WhatsApp
+                          Dapatkan Penawaran Terbaik
                         </Button>
                       </form>
                     )}

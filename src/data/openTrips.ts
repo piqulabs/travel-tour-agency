@@ -10,6 +10,7 @@ export const openTrips: OpenTrip[] = [
     totalSeats: 16,
     price: 3850000,
     image: images.destinations["labuan-bajo"],
+    badges: ["best-seller", "this-week"],
   },
   {
     id: "ot-2",
@@ -19,6 +20,7 @@ export const openTrips: OpenTrip[] = [
     totalSeats: 20,
     price: 1150000,
     image: images.destinations.bromo,
+    badges: ["this-week"],
   },
   {
     id: "ot-3",
@@ -28,6 +30,7 @@ export const openTrips: OpenTrip[] = [
     totalSeats: 12,
     price: 9800000,
     image: images.destinations["raja-ampat"],
+    badges: ["popular"],
   },
   {
     id: "ot-4",
@@ -37,6 +40,7 @@ export const openTrips: OpenTrip[] = [
     totalSeats: 18,
     price: 2450000,
     image: images.destinations.yogyakarta,
+    badges: ["popular"],
   },
   {
     id: "ot-5",
@@ -46,6 +50,7 @@ export const openTrips: OpenTrip[] = [
     totalSeats: 15,
     price: 3650000,
     image: images.destinations.lombok,
+    badges: ["best-seller"],
   },
   {
     id: "ot-6",
@@ -55,5 +60,6 @@ export const openTrips: OpenTrip[] = [
     totalSeats: 20,
     price: 4200000,
     image: images.destinations.bali,
+    badges: ["popular"],
   },
 ];

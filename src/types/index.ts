@@ -69,6 +69,11 @@ export interface NavLink {
   href: string;
 }
 
+export type OpenTripBadge =
+  | "best-seller"
+  | "popular"
+  | "this-week";
+
 export interface OpenTrip {
   id: string;
   destination: string;
@@ -77,6 +82,7 @@ export interface OpenTrip {
   totalSeats: number;
   price: number;
   image: string;
+  badges?: OpenTripBadge[];
 }
 
 export interface GoogleReview {

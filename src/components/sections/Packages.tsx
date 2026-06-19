@@ -19,17 +19,17 @@ import { cn } from "@/lib/utils";
 
 const BADGE_CONFIG = {
   "best-seller": {
-    label: "Paling Laris",
+    label: "Best Seller",
     emoji: "🔥",
     className: "bg-gradient-to-r from-orange-500 to-red-500 text-white",
   },
   favorit: {
-    label: "Pilihan Tamu",
+    label: "Favorit Wisatawan",
     emoji: "⭐",
     className: "bg-gradient-to-r from-amber-400 to-yellow-500 text-amber-950",
   },
   promo: {
-    label: "Harga Spesial",
+    label: "Promo",
     emoji: "⚡",
     className: "bg-gradient-to-r from-primary to-secondary text-white",
   },
@@ -63,7 +63,7 @@ export default function Packages() {
           whileInView="visible"
           viewport={defaultViewport}
           variants={staggerContainer}
-          className="grid gap-7 md:grid-cols-2 xl:grid-cols-3"
+          className="grid gap-8 md:grid-cols-2 xl:grid-cols-3"
         >
           {packages.map((pkg) => {
             const badge = pkg.badge ? BADGE_CONFIG[pkg.badge] : null;
@@ -93,9 +93,9 @@ export default function Packages() {
                         className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                         sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-100" />
+                      <div className="absolute inset-0 image-overlay-gradient opacity-90 transition-opacity duration-500 group-hover:opacity-100" />
                     </div>
-                    <CardHeader className="px-6 pb-2 pt-5">
+                    <CardHeader className="px-6 pb-2 pt-6">
                       <CardTitle className="font-heading text-xl leading-snug tracking-tight">
                         {pkg.title}
                       </CardTitle>
@@ -107,7 +107,7 @@ export default function Packages() {
                         {pkg.duration}
                       </div>
                     </CardHeader>
-                    <CardContent className="flex flex-1 flex-col gap-5 px-6 pb-6">
+                    <CardContent className="flex flex-1 flex-col gap-6 px-6 pb-7">
                       <div>
                         <p className="mb-2.5 text-xs font-bold uppercase tracking-widest text-primary/80">
                           Fasilitas
@@ -157,14 +157,14 @@ export default function Packages() {
                           <Button
                             asChild
                             size="lg"
-                            className="h-12 w-full rounded-xl bg-primary text-base font-semibold shadow-md shadow-primary/20 hover:bg-primary/90"
+                            className="h-13 w-full rounded-xl bg-primary text-base font-bold shadow-xl shadow-primary/30 transition-shadow hover:bg-primary/90 hover:shadow-2xl hover:shadow-primary/25 sm:h-12"
                           >
                             <a
                               href={`${WHATSAPP_URL}?text=${encodeURIComponent(`Halo Nusantara Trip, saya tertarik paket ${pkg.title}. Bisa kirim itinerary lengkap & info DP?`)}`}
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              Amankan Kursi Saya
+                              Pesan Sekarang
                               <ArrowRight className="size-4" />
                             </a>
                           </Button>

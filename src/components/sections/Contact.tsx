@@ -136,7 +136,7 @@ export default function Contact() {
                   rel="noopener noreferrer"
                 >
                   <MessageCircle className="size-5" />
-                  Chat WhatsApp — Balas Cepat
+                  Konsultasi Gratis via WhatsApp
                 </a>
               </Button>
             </div>

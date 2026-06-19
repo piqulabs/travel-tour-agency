@@ -47,7 +47,7 @@ export default function Gallery() {
             <motion.div
               key={image.id}
               variants={fadeInUp}
-              className="group relative break-inside-avoid overflow-hidden rounded-2xl shadow-md"
+              className="group relative break-inside-avoid overflow-hidden rounded-2xl shadow-lg ring-1 ring-black/5 transition-shadow duration-500 hover:shadow-2xl"
             >
               <SafeImage
                 src={image.src}
@@ -62,11 +62,12 @@ export default function Gallery() {
                       ? 400
                       : 600
                 }
-                className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/40">
-                <ZoomIn className="size-8 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              <div className="image-overlay-gradient absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <ZoomIn className="size-8 text-white opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:scale-110" />
               </div>
               <div className="absolute inset-x-0 bottom-0 translate-y-full bg-gradient-to-t from-black/80 to-transparent p-4 transition-transform duration-300 group-hover:translate-y-0">
                 <p className="text-sm font-medium text-white">{image.alt}</p>

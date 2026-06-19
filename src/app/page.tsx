@@ -26,15 +26,15 @@ export default function Home() {
       <main className="mobile-cta-spacer">
         <Hero />
         <TrustBadges />
+        <OpenTrips />
         <Destinations />
         <Packages />
         <CTASection
-          title="Sudah Tahu Mau Ke Mana?"
-          description="Kirim destinasi + tanggal ke WhatsApp kami. Dalam hitungan jam Anda dapat itinerary dan harga final — tanpa biaya konsultasi."
-          primaryLabel="Minta Itinerary Gratis"
-          secondaryLabel="Bandingkan Paket"
+          title="Belum Yakin Pilih Trip Mana?"
+          description="Konsultasi gratis via WhatsApp — tim kami bantu cocokkan destinasi, tanggal, dan budget Anda dalam hitungan jam."
+          primaryLabel="Konsultasi Gratis via WhatsApp"
+          secondaryLabel="Dapatkan Penawaran Terbaik"
         />
-        <OpenTrips />
         <WhyChooseUs />
         <Gallery />
         <CustomTrip />
@@ -46,9 +46,9 @@ export default function Home() {
         <Contact />
         <CTASection
           variant="dark"
-          title="Kuota Juli & Agustus Terbatas"
-          description="Open trip Labuan Bajo dan Bromo hampir penuh. Booking sekarang supaya tanggal keberangkatan Anda nggak diambil orang lain."
-          primaryLabel="Cek Ketersediaan Kursi"
+          title="Kuota Juli & Agustus Hampir Penuh"
+          description="Open trip Labuan Bajo tinggal sisa 4 kursi. Amankan slot Anda sekarang sebelum jadwal pilihan habis."
+          primaryLabel="Tanyakan Jadwal Keberangkatan"
         />
       </main>
       <Footer />

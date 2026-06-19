@@ -62,10 +62,10 @@ export default function Destinations() {
                       category="destination"
                       context={`Destinations: ${destination.title}`}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
+                    <div className="image-overlay-gradient absolute inset-0" />
                     <div className="absolute bottom-4 left-4 right-4">
                       <div className="flex items-center gap-1.5 text-white">
                         <MapPin className="size-4 text-secondary" />
@@ -100,9 +100,9 @@ export default function Destinations() {
                           {formatPrice(destination.startingPrice)}
                         </p>
                       </div>
-                      <Button asChild size="sm" variant="outline" className="gap-1">
-                        <Link href="#paket">
-                          Lihat Paket ke {destination.title}
+                      <Button asChild size="sm" variant="outline" className="gap-1 font-semibold">
+                        <Link href="#open-trip">
+                          Lihat Open Trip
                           <ArrowRight className="size-3.5" />
                         </Link>
                       </Button>

@@ -19,9 +19,9 @@ import type { NavLink } from "@/types";
 
 const navLinks: NavLink[] = [
   { label: "Beranda", href: "#beranda" },
+  { label: "Open Trip", href: "#open-trip" },
   { label: "Destinasi", href: "#destinasi" },
   { label: "Paket Wisata", href: "#paket" },
-  { label: "Open Trip", href: "#open-trip" },
   { label: "Galeri", href: "#galeri" },
   { label: "Kontak", href: "#kontak" },
 ];
@@ -99,7 +99,7 @@ export default function Navbar() {
               className="gap-2"
             >
               <MessageCircle className="size-4" />
-              Tanya Jadwal
+              Konsultasi Gratis
             </a>
           </Button>
 
@@ -153,7 +153,7 @@ export default function Navbar() {
                     onClick={() => setOpen(false)}
                   >
                     <MessageCircle className="size-4" />
-                    Chat — Tanya Jadwal
+                    Konsultasi Gratis via WhatsApp
                   </a>
                 </Button>
               </div>
