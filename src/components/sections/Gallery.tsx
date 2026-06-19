@@ -26,15 +26,13 @@ export default function Gallery() {
           transition={{ duration: 0.6 }}
           className="mx-auto mb-12 max-w-2xl text-center sm:mb-14"
         >
-          <span className="text-sm font-semibold uppercase tracking-widest text-primary">
-            Galeri
-          </span>
-          <h2 className="mt-3 font-heading text-3xl font-bold text-brand-text sm:text-4xl">
-            Momen Indah dari Trip Kami
+          <span className="section-eyebrow">Galeri</span>
+          <h2 className="section-title mt-4">
+            Foto dari Trip Nyata, Bukan Stock
           </h2>
-          <p className="mt-4 text-base text-muted-foreground">
-            Cuplikan pengalaman nyata para wisatawan Nusantara Trip di
-            berbagai destinasi favorit Indonesia.
+          <p className="section-desc mt-5">
+            Dokumentasi tamu kami di Bali, Komodo, Bromo, dan Raja Ampat.
+            Begini kira-kira pemandangan yang menanti Anda.
           </p>
         </motion.div>
 

@@ -1,62 +1,47 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BadgeCheck, Shield, Star, Users } from "lucide-react";
+import {
+  BadgeCheck,
+  Shield,
+  Tag,
+  Zap,
+  Users,
+} from "lucide-react";
 
-import { BRAND } from "@/lib/constants";
 import { fadeInUp, staggerContainer, defaultViewport } from "@/lib/motion";
 
-const badges = [
-  {
-    icon: BadgeCheck,
-    label: "Berizin Resmi",
-    sub: "Kemenparekraf",
-  },
-  {
-    icon: Star,
-    label: `Rating ${BRAND.googleRating}`,
-    sub: `${BRAND.googleReviews}+ Ulasan Google`,
-  },
-  {
-    icon: Users,
-    label: "10.000+",
-    sub: "Wisatawan Puas",
-  },
-  {
-    icon: Shield,
-    label: "Pembayaran Aman",
-    sub: "Transfer & E-Wallet",
-  },
+const trustItems = [
+  { icon: BadgeCheck, label: "Izin Kemenparekraf" },
+  { icon: Tag, label: "Harga Final di Awal" },
+  { icon: Shield, label: "Kwitansi & Invoice Resmi" },
+  { icon: Zap, label: "Balas WA < 30 Menit" },
+  { icon: Users, label: "Guide Lokal Bersertifikat" },
 ];
 
 export default function TrustBadges() {
   return (
-    <section className="border-b border-border bg-white py-6 sm:py-8">
+    <section className="border-b border-border/60 bg-white py-8 sm:py-10">
       <div className="container-wide px-4 sm:px-6 lg:px-8">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={defaultViewport}
           variants={staggerContainer}
-          className="grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6"
+          className="flex flex-wrap items-center justify-center gap-x-6 gap-y-4 sm:gap-x-10"
         >
-          {badges.map((badge) => (
+          {trustItems.map((item) => (
             <motion.div
-              key={badge.label}
+              key={item.label}
               variants={fadeInUp}
-              className="flex items-center gap-3 rounded-xl border border-border/60 bg-muted/30 px-4 py-3 sm:px-5 sm:py-4"
+              className="flex items-center gap-2.5"
             >
-              <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                <badge.icon className="size-5" />
+              <div className="flex size-8 items-center justify-center rounded-full bg-primary/10">
+                <item.icon className="size-4 text-primary" />
               </div>
-              <div className="min-w-0">
-                <p className="truncate text-sm font-semibold text-brand-text">
-                  {badge.label}
-                </p>
-                <p className="truncate text-xs text-muted-foreground">
-                  {badge.sub}
-                </p>
-              </div>
+              <span className="text-sm font-semibold text-brand-text">
+                ✓ {item.label}
+              </span>
             </motion.div>
           ))}
         </motion.div>

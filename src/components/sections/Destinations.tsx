@@ -29,15 +29,14 @@ export default function Destinations() {
           transition={{ duration: 0.6 }}
           className="mx-auto mb-12 max-w-2xl text-center sm:mb-14"
         >
-          <span className="text-sm font-semibold uppercase tracking-widest text-primary">
-            Destinasi Populer
-          </span>
-          <h2 className="mt-3 font-heading text-3xl font-bold text-brand-text sm:text-4xl">
-            Destinasi Favorit Wisatawan Indonesia
+          <span className="section-eyebrow">Destinasi</span>
+          <h2 className="section-title mt-4">
+            Ke Mana Anda Mau Berlibur Tahun Ini?
           </h2>
-          <p className="mt-4 text-base text-muted-foreground">
-            Dari pantai tropis hingga gunung berapi — pilih destinasi impian
-            Anda dan biarkan kami yang mengurus sisanya.
+          <p className="section-desc mt-5">
+            Enam destinasi paling sering dibooking pelanggan kami — dari
+            weekend trip Bromo sampai sailing Komodo. Pilih, kami yang atur
+            sisanya.
           </p>
         </motion.div>
 
@@ -103,7 +102,7 @@ export default function Destinations() {
                       </div>
                       <Button asChild size="sm" variant="outline" className="gap-1">
                         <Link href="#paket">
-                          Lihat Paket
+                          Lihat Paket ke {destination.title}
                           <ArrowRight className="size-3.5" />
                         </Link>
                       </Button>

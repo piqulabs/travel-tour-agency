@@ -14,39 +14,39 @@ import { fadeInUp, defaultViewport } from "@/lib/motion";
 const faqItems: FAQItem[] = [
   {
     id: "1",
-    question: "Bagaimana cara melakukan pemesanan?",
+    question: "Gimana cara booking di Nusantara Trip?",
     answer:
-      "Anda bisa booking melalui WhatsApp, form kontak di website, atau datang langsung ke kantor kami. Tim kami akan mengirimkan detail paket, harga, dan cara pembayaran. Setelah DP masuk, booking langsung dikonfirmasi.",
+      "Paling cepat lewat WhatsApp — kirim destinasi, tanggal, dan jumlah orang. Kami balas dengan PDF itinerary + rincian harga. Transfer DP 30%, langsung dapat voucher dan grup trip (kalau open trip). Bisa juga isi form kontak atau datang ke kantor di Gatot Subroto.",
   },
   {
     id: "2",
-    question: "Apakah tersedia cicilan pembayaran?",
+    question: "Bisa cicil pembayaran nggak?",
     answer:
-      "Ya, kami menyediakan skema cicilan untuk paket tertentu. Umumnya DP 30% saat booking, pelunasan maksimal H-7 sebelum keberangkatan. Untuk paket premium, tersedia cicilan 2–3 kali. Hubungi tim kami untuk detail.",
+      "Bisa. Standarnya DP 30% saat fix booking, pelunasan H-7 sebelum berangkat. Paket di atas Rp5 juta bisa cicil 2–3x tanpa bunga. Semua pembayaran dapat kwitansi resmi via email & WhatsApp.",
   },
   {
     id: "3",
-    question: "Apakah paket bisa disesuaikan?",
+    question: "Paketnya bisa diubah nggak?",
     answer:
-      "Tentu saja. Semua paket bisa dikustomisasi — mulai dari pilihan hotel, durasi trip, hingga destinasi tambahan. Gunakan form 'Buat Perjalanan Sesuai Keinginan Anda' atau chat WhatsApp untuk konsultasi gratis.",
+      "Bisa banget. Ganti hotel, tambah hari, skip destinasi — semua bisa. Pakai form Custom Trip di bawah atau langsung chat admin. Kami revisi itinerary sampai Anda oke, baru bayar DP.",
   },
   {
     id: "4",
-    question: "Bagaimana jika ingin reschedule?",
+    question: "Kalau mau pindah tanggal gimana?",
     answer:
-      "Reschedule bisa dilakukan maksimal H-14 sebelum keberangkatan, tergantung ketersediaan kursi dan akomodasi. Biaya administrasi reschedule Rp150.000 per orang. Hubungi tim kami secepatnya untuk proses reschedule.",
+      "Reschedule gratis kalau dilapor H-14 sebelum berangkat dan masih ada kursi. Setelah itu, biaya admin Rp150.000/orang. Untuk force majeure (sakit, kecelakaan), hubungi kami — kami carikan solusi terbaik.",
   },
   {
     id: "5",
-    question: "Apakah tersedia private trip?",
+    question: "Ada private trip untuk grup kecil?",
     answer:
-      "Ya, private trip tersedia untuk semua destinasi. Cocok untuk keluarga, rombongan kantor, atau honeymoon. Harga disesuaikan dengan jumlah peserta dan fasilitas yang diinginkan. Minimal 2 orang untuk private trip.",
+      "Ada, minimal 2 orang. Cocok buat honeymoon, anniversary, atau trip kantor. Harga per orang turun kalau pesertanya lebih banyak. Semua destinasi kami layani private — dari Bromo weekend sampai Raja Ampat 7 hari.",
   },
   {
     id: "6",
-    question: "Metode pembayaran apa saja yang diterima?",
+    question: "Bayarnya lewat apa aja?",
     answer:
-      "Kami menerima transfer bank (BCA, Mandiri, BRI), e-wallet (GoPay, OVO, Dana, ShopeePay), dan QRIS. Semua pembayaran mendapat kwitansi resmi dan konfirmasi otomatis via WhatsApp.",
+      "Transfer BCA, Mandiri, BRI — atau e-wallet (GoPay, OVO, Dana, ShopeePay) dan QRIS. Nggak perlu datang ke kantor cuma buat bayar. Konfirmasi otomatis masuk ke WhatsApp Anda setelah transfer kami terima.",
   },
 ];
 
@@ -62,15 +62,13 @@ export default function FAQ() {
           transition={{ duration: 0.6 }}
           className="mx-auto mb-12 max-w-2xl text-center sm:mb-14"
         >
-          <span className="text-sm font-semibold uppercase tracking-widest text-primary">
-            Pertanyaan Umum
-          </span>
-          <h2 className="mt-3 font-heading text-3xl font-bold text-brand-text sm:text-4xl">
-            FAQ — Yang Sering Ditanyakan
+          <span className="section-eyebrow">FAQ</span>
+          <h2 className="section-title mt-4">
+            Yang Sering Ditanya Sebelum Booking
           </h2>
-          <p className="mt-4 text-base text-muted-foreground">
-            Jawaban untuk pertanyaan yang paling sering kami terima dari calon
-            wisatawan. Masih ada pertanyaan? Langsung chat kami.
+          <p className="section-desc mt-5">
+            Jawaban singkat dari pengalaman ribuan trip kami. Masih bingung?
+            Langsung chat — nggak perlu basa-basi.
           </p>
         </motion.div>
 

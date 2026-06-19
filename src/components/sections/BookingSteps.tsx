@@ -10,30 +10,30 @@ const steps: BookingStep[] = [
   {
     id: "1",
     step: 1,
-    title: "Konsultasi & Pilih Paket",
+    title: "Chat & Pilih Trip",
     description:
-      "Hubungi kami via WhatsApp atau form kontak. Ceritakan destinasi, tanggal, dan jumlah peserta — tim kami bantu pilih paket terbaik.",
+      "Kirim destinasi, tanggal, dan jumlah orang lewat WhatsApp. Admin bantu pilih open trip atau private — sesuai budget Anda.",
   },
   {
     id: "2",
     step: 2,
-    title: "Konfirmasi Itinerary",
+    title: "Cek Itinerary PDF",
     description:
-      "Review detail perjalanan, fasilitas, dan harga. Semua transparan sebelum Anda memutuskan untuk booking.",
+      "Kami kirim rincian hari per hari, fasilitas, dan total biaya. Revisi sampai pas — baru lanjut bayar.",
   },
   {
     id: "3",
     step: 3,
-    title: "Pembayaran & Konfirmasi",
+    title: "Transfer DP",
     description:
-      "Bayar via transfer bank atau e-wallet. Setelah DP masuk, Anda langsung dapat voucher dan jadwal keberangkatan.",
+      "DP 30% via transfer atau e-wallet. Langsung dapat voucher, info titik kumpul, dan nomor guide.",
   },
   {
     id: "4",
     step: 4,
-    title: "Berangkat & Nikmati",
+    title: "Berangkat",
     description:
-      "Tinggal siapkan koper dan datang ke titik kumpul. Tim kami dampingi selama perjalanan hingga kembali ke rumah.",
+      "Datang ke titik kumpul dengan koper siap. Sisanya — transport, makan, tiket — kami yang handle.",
   },
 ];
 
@@ -51,15 +51,13 @@ export default function BookingSteps() {
           transition={{ duration: 0.6 }}
           className="mx-auto mb-12 max-w-2xl text-center sm:mb-14"
         >
-          <span className="text-sm font-semibold uppercase tracking-widest text-primary">
-            Cara Booking
-          </span>
-          <h2 className="mt-3 font-heading text-3xl font-bold text-brand-text sm:text-4xl">
-            Mudah dalam 4 Langkah
+          <span className="section-eyebrow">Cara Booking</span>
+          <h2 className="section-title mt-4">
+            Dari Chat sampai Berangkat — 4 Langkah
           </h2>
-          <p className="mt-4 text-base text-muted-foreground">
-            Proses pemesanan yang simpel dan cepat — dari konsultasi pertama
-            hingga Anda berangkat liburan.
+          <p className="section-desc mt-5">
+            Nggak perlu ke kantor. Kebanyakan tamu kami fix booking cuma lewat
+            WhatsApp dalam satu hari.
           </p>
         </motion.div>
 

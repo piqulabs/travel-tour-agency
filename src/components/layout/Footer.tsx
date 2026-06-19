@@ -36,9 +36,9 @@ export default function Footer() {
               </div>
             </Link>
             <p className="max-w-xs text-sm leading-relaxed text-white/65">
-              Agen wisata terpercaya sejak 2012. Melayani open trip, private
-              trip, dan paket wisata ke seluruh Indonesia dengan harga
-              transparan dan pelayanan profesional.
+              Agen wisata berizin sejak 2012. Open trip, private tour, dan
+              paket keluarga ke seluruh Indonesia — dihandle tim operasional
+              di Jakarta, bukan reseller online.
             </p>
             <div className="flex gap-3">
               <a

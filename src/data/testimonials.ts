@@ -7,16 +7,16 @@ export const testimonials: Testimonial[] = [
     name: "Andi Pratama",
     rating: 5,
     review:
-      "Trip ke Labuan Bajo bareng Nusantara Trip beneran rapi dari awal. Kapal bersih, makan enak, guide-nya sabar banget. Anak saya sampai bilang mau balik lagi tahun depan.",
+      "Pertama kali ke Labuan Bajo dan langsung naik kapal phinisi. Kamar bersih, makanannya enak — ada ikan bakar tiap malam. Guide-nya orang Flores asli, jelasin sejarah Pulau Komodo dengan detail. Anak saya (7 tahun) ikut trekking komodo juga aman.",
     image: images.avatars[0],
-    location: "Jakarta",
+    location: "Jakarta Selatan",
   },
   {
     id: "2",
     name: "Rina Maharani",
     rating: 5,
     review:
-      "Paket keluarga ke Bali 4H3M worth it banget. Hotelnya nyaman, jadwalnya nggak buru-buru, dan timnya fast response di WhatsApp. Recommended buat yang bawa anak kecil.",
+      "Booking paket Bali keluarga buat 4 orang termasuk 2 anak. Driver-nya Pak Made sabar banget, hotel di Seminyak sesuai foto. Yang paling saya suka: jadwalnya nggak dikejar-kejar. Waterbom-nya anak-anak puas, kami juga dapat waktu sendiri di pantai.",
     image: images.avatars[1],
     location: "Bandung",
   },
@@ -25,7 +25,7 @@ export const testimonials: Testimonial[] = [
     name: "Dimas Saputra",
     rating: 5,
     review:
-      "Pertama kali ke Raja Ampat dan langsung puas. Semua sudah diurus, tinggal foto-foto dan menikmati. Harganya transparan, nggak ada biaya tambahan yang nggak jelas.",
+      "Raja Ampat memang mahal, tapi Nusantara Trip kasih breakdown harga yang jelas dari awal. Nggak ada biaya mendadak di lapangan. Snorkeling di Arborek ketemu penyu, guide fotoin juga. Resort-nya basic tapi lokasinya tepat di tepi laut.",
     image: images.avatars[2],
     location: "Surabaya",
   },
@@ -34,7 +34,7 @@ export const testimonials: Testimonial[] = [
     name: "Siti Nurhaliza",
     rating: 5,
     review:
-      "Open trip Bromo-nya seru banget. Sunrise-nya cakep, jeep-nya oke, dan grupnya asik. Cocok buat solo traveler yang mau hemat tapi tetap nyaman.",
+      "Ikut open trip Bromo sendirian, awalnya ragu. Ternyata grupnya 12 orang, mostly solo traveler juga. Jeep-nya datang tepat waktu jam 3 pagi, sunrise-nya keluar — foto di Penanjakan jadi wallpaper HP saya sampai sekarang.",
     image: images.avatars[3],
     location: "Semarang",
   },
@@ -43,7 +43,7 @@ export const testimonials: Testimonial[] = [
     name: "Bambang Wijaya",
     rating: 5,
     review:
-      "Tour Jogja bareng istri puas semua. Borobudur pagi-pagi, Prambanan sore, plus kuliner di Malioboro. Guide-nya paham banget sejarahnya, bukan asal jalan aja.",
+      "Trip Jogja buat anniversary ke-15. Guide-nya Mas Joko mantan pramuwisata, cerita sejarah Borobudur-nya hidup banget. Plus dia tau warung gudeg enak yang nggak ada di Google Maps. Istri saya bilang ini trip terbaik kami sejak nikah.",
     image: images.avatars[4],
     location: "Yogyakarta",
   },
@@ -52,7 +52,7 @@ export const testimonials: Testimonial[] = [
     name: "Putri Anggraini",
     rating: 5,
     review:
-      "Custom trip ke Lombok sesuai request kami. Budget dijaga, itinerary fleksibel, dan timnya bantu carikan penginapan bagus di Senggigi. Pasti pakai lagi buat trip berikutnya.",
+      "Minta custom trip Lombok buat 6 orang kantor. Budget kami Rp4 juta/orang, tim Nusantara Trip susun itinerary yang pas tanpa ngurangin pengalaman. Resort di Senggigi bagus, fast boat ke Gili lancar. HR kami sudah rencana booking lagi tahun depan.",
     image: images.avatars[5],
     location: "Medan",
   },
@@ -65,8 +65,10 @@ export const googleReviews: GoogleReview[] = [
     date: "2 minggu lalu",
     rating: 5,
     review:
-      "Pelayanan ramah, harga jelas, dan trip Labuan Bajo-nya sesuai itinerary. Mantap!",
+      "Udah 3x booking di sini. Labuan Bajo terakhir jadwalnya persis kayak yang dijanjiin, kapalnya lebih bagus dari ekspektasi. Admin WhatsApp-nya jawab cepat, bahkan malam.",
     avatar: images.avatars[0],
+    city: "Jakarta",
+    verified: true,
   },
   {
     id: "gr-2",
@@ -74,8 +76,10 @@ export const googleReviews: GoogleReview[] = [
     date: "1 bulan lalu",
     rating: 5,
     review:
-      "Booking lewat WhatsApp cepat banget. Timnya detail jelasin fasilitasnya. Puas!",
+      "Pertama booking travel online, deg-degan. Tapi semua fasilitas dijelasin detail lewat PDF itinerary. Pas berangkat, semuanya sesuai. Nggak ada drama.",
     avatar: images.avatars[1],
+    city: "Bandung",
+    verified: true,
   },
   {
     id: "gr-3",
@@ -83,8 +87,10 @@ export const googleReviews: GoogleReview[] = [
     date: "3 minggu lalu",
     rating: 5,
     review:
-      "Bromo sunrise trip recommended. Jeep tepat waktu, guide berpengalaman.",
+      "Bromo trip dari Surabaya. Jeep-nya nyampe hotel jam 3.15, nggak telat. Guide-nya bantu cari spot foto terbaik di kawah. Harga segini worth it buat weekend.",
     avatar: images.avatars[2],
+    city: "Surabaya",
+    verified: true,
   },
   {
     id: "gr-4",
@@ -92,7 +98,9 @@ export const googleReviews: GoogleReview[] = [
     date: "1 bulan lalu",
     rating: 5,
     review:
-      "Paket Bali keluarga sangat membantu. Anak-anak happy, kami juga tenang.",
+      "Bawa 3 anak kecil ke Bali pakai paket keluarga mereka. Driver sabar nungguin anak capek, hotel ada kolam renang. Anak-anak happy, saya juga bisa istirahat.",
     avatar: images.avatars[3],
+    city: "Denpasar",
+    verified: true,
   },
 ];

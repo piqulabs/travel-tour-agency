@@ -16,22 +16,23 @@ import BookingSteps from "@/components/sections/BookingSteps";
 import FAQ from "@/components/sections/FAQ";
 import Contact from "@/components/sections/Contact";
 import WhatsappButton from "@/components/shared/WhatsappButton";
+import MobileStickyCTA from "@/components/shared/MobileStickyCTA";
 import ImageAudit from "@/components/shared/ImageAudit";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <main>
+      <main className="mobile-cta-spacer">
         <Hero />
         <TrustBadges />
         <Destinations />
         <Packages />
         <CTASection
-          title="Sudah Punya Destinasi Impian?"
-          description="Konsultasikan rencana liburan Anda sekarang — gratis, tanpa komitmen. Tim kami siap bantu pilih paket terbaik sesuai budget."
-          primaryLabel="Chat WhatsApp Sekarang"
-          secondaryLabel="Lihat Semua Paket"
+          title="Sudah Tahu Mau Ke Mana?"
+          description="Kirim destinasi + tanggal ke WhatsApp kami. Dalam hitungan jam Anda dapat itinerary dan harga final — tanpa biaya konsultasi."
+          primaryLabel="Minta Itinerary Gratis"
+          secondaryLabel="Bandingkan Paket"
         />
         <OpenTrips />
         <WhyChooseUs />
@@ -45,13 +46,14 @@ export default function Home() {
         <Contact />
         <CTASection
           variant="dark"
-          title="Jangan Tunda Liburan Impian Anda"
-          description="Kuota open trip terbatas dan harga promo berlaku untuk booking bulan ini. Hubungi kami hari ini dan dapatkan penawaran terbaik."
-          primaryLabel="Hubungi Kami Sekarang"
+          title="Kuota Juli & Agustus Terbatas"
+          description="Open trip Labuan Bajo dan Bromo hampir penuh. Booking sekarang supaya tanggal keberangkatan Anda nggak diambil orang lain."
+          primaryLabel="Cek Ketersediaan Kursi"
         />
       </main>
       <Footer />
       <WhatsappButton />
+      <MobileStickyCTA />
       <ImageAudit />
     </>
   );

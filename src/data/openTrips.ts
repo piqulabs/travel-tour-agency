@@ -4,7 +4,7 @@ import { images } from "@/data/images";
 export const openTrips: OpenTrip[] = [
   {
     id: "ot-1",
-    destination: "Labuan Bajo — Komodo Explorer",
+    destination: "Labuan Bajo — Sailing Komodo 3H2M",
     departureDate: "5 Juli 2026",
     seatsLeft: 4,
     totalSeats: 16,
@@ -13,7 +13,7 @@ export const openTrips: OpenTrip[] = [
   },
   {
     id: "ot-2",
-    destination: "Bromo Sunrise & Madakaripura",
+    destination: "Bromo Sunrise + Madakaripura",
     departureDate: "12 Juli 2026",
     seatsLeft: 7,
     totalSeats: 20,
@@ -22,7 +22,7 @@ export const openTrips: OpenTrip[] = [
   },
   {
     id: "ot-3",
-    destination: "Raja Ampat — Piaynemo Trip",
+    destination: "Raja Ampat — Piaynemo & Snorkeling",
     departureDate: "19 Juli 2026",
     seatsLeft: 2,
     totalSeats: 12,
@@ -31,7 +31,7 @@ export const openTrips: OpenTrip[] = [
   },
   {
     id: "ot-4",
-    destination: "Yogyakarta Heritage Tour",
+    destination: "Jogja Heritage — Borobudur & Prambanan",
     departureDate: "26 Juli 2026",
     seatsLeft: 9,
     totalSeats: 18,
@@ -40,7 +40,7 @@ export const openTrips: OpenTrip[] = [
   },
   {
     id: "ot-5",
-    destination: "Lombok — Gili Island Hopping",
+    destination: "Lombok — Gili Trawangan Hopping",
     departureDate: "2 Agustus 2026",
     seatsLeft: 5,
     totalSeats: 15,
@@ -49,7 +49,7 @@ export const openTrips: OpenTrip[] = [
   },
   {
     id: "ot-6",
-    destination: "Bali Family Fun Trip",
+    destination: "Bali Family Trip — Waterbom & Ubud",
     departureDate: "9 Agustus 2026",
     seatsLeft: 6,
     totalSeats: 20,

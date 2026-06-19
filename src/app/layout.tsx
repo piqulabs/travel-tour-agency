@@ -29,13 +29,13 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: `${BRAND.name} — Agen Wisata Indonesia Terpercaya`,
+  title: `${BRAND.name} — Paket Wisata & Open Trip Indonesia`,
   description:
-    "Paket wisata, open trip, dan private tour ke Bali, Labuan Bajo, Raja Ampat, Bromo, dan seluruh Indonesia. Harga transparan, berizin resmi.",
+    "Open trip Labuan Bajo, paket keluarga Bali, sunrise Bromo, Raja Ampat. Berizin sejak 2012, harga final di awal. Booking via WhatsApp.",
   openGraph: {
-    title: `${BRAND.name} — Agen Wisata Indonesia Terpercaya`,
+    title: `${BRAND.name} — Paket Wisata & Open Trip Indonesia`,
     description:
-      "Temani perjalanan terbaik Anda menjelajahi Indonesia bersama Nusantara Trip.",
+      "Agen wisata Jakarta — open trip, private tour, dan paket keluarga ke destinasi terbaik Indonesia. Booking via WhatsApp.",
     type: "website",
     locale: "id_ID",
   },

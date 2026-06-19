@@ -21,39 +21,39 @@ import {
 const features = [
   {
     icon: BadgeCheck,
-    title: "Berizin dan Terpercaya",
+    title: "Berizin, Bukan Abal-Abal",
     description:
-      "Terdaftar resmi dan telah melayani ribuan wisatawan sejak 2012. Keamanan dan kenyamanan Anda adalah prioritas utama kami.",
+      "Terdaftar resmi Kemenparekraf. Sejak 2012 kami handle trip dari 2 orang sampai rombongan 40+ — tanpa drama di lapangan.",
   },
   {
     icon: Tag,
-    title: "Harga Transparan",
+    title: "Harga Final di Awal",
     description:
-      "Semua biaya dijelaskan sejak awal — tidak ada biaya tersembunyi. Anda tahu persis apa yang Anda bayar sebelum berangkat.",
+      "Itinerary PDF lengkap sebelum Anda bayar DP. Nggak ada biaya mendadak untuk tiket masuk, parkir, atau makan tambahan.",
   },
   {
     icon: Users,
-    title: "Tim Berpengalaman",
+    title: "Guide yang Ngerti Lokal",
     description:
-      "Guide dan tour leader bersertifikat yang menguasai destinasi lokal, siap memberikan pengalaman wisata yang berkesan.",
+      "Guide kami orang asli destinasi — Flores, Bali, Papua. Bukan cuma bawa jalan, tapi cerita tempat yang nggak ada di Google.",
   },
   {
     icon: CalendarClock,
-    title: "Jadwal Fleksibel",
+    title: "Open Trip atau Private",
     description:
-      "Private trip, open trip, atau custom itinerary — kami sesuaikan jadwal dan kebutuhan perjalanan Anda.",
+      "Mau gabung grup biar hemat? Atau private buat keluarga? Jadwal dan fasilitas kami sesuaikan, bukan pakai template.",
   },
   {
     icon: Zap,
-    title: "Pelayanan Cepat",
+    title: "Admin WA Responsif",
     description:
-      "Respon WhatsApp rata-rata di bawah 30 menit pada jam operasional. Proses booking simpel dan tidak bertele-tele.",
+      "Chat di jam kerja biasanya dibalas dalam 30 menit. Mau ubah hotel, tambah hari, atau ganti tanggal — tinggal bilang.",
   },
   {
     icon: Headphones,
-    title: "Dukungan Selama Perjalanan",
+    title: "Dampingan Sampai Pulang",
     description:
-      "Tim kami standby sebelum, selama, dan setelah trip. Ada kendala di lapangan? Langsung hubungi kami.",
+      "Ada kendala di bandara, hotel, atau kapal? Tim operasional standby 24 jam selama trip berlangsung.",
   },
 ];
 
@@ -70,14 +70,14 @@ export default function WhyChooseUs() {
           className="mx-auto mb-12 max-w-2xl text-center sm:mb-14"
         >
           <span className="text-sm font-semibold uppercase tracking-widest text-secondary">
-            Keunggulan Kami
+            Kenapa Kami
           </span>
           <h2 className="mt-3 font-heading text-3xl font-bold sm:text-4xl">
-            Kenapa Memilih Nusantara Trip?
+            Bukan Sekadar Jual Tiket
           </h2>
           <p className="mt-4 text-white/65">
-            Bukan sekadar agen tiket — kami partner perjalanan Anda yang
-            memahami kebutuhan wisatawan Indonesia.
+            Kami tim operasional di Jakarta yang tiap bulan sendiri ke destinasi.
+            Yang kami jual: perjalanan yang beneran jalan sesuai rencana.
           </p>
         </motion.div>
 

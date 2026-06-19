@@ -1,6 +1,6 @@
 export const BRAND = {
   name: "Nusantara Trip",
-  tagline: "Temani Perjalanan Terbaik Anda Menjelajahi Indonesia",
+  tagline: "Agen Wisata Jakarta — Beroperasi Sejak 2012",
   email: "info@nusantaratrip.id",
   phone: "+62 812 3456 7890",
   phoneTel: "+6281234567890",

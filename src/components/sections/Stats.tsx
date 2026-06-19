@@ -15,10 +15,10 @@ import { images } from "@/data/images";
 import { fadeInUp, staggerContainer, defaultViewport } from "@/lib/motion";
 
 const stats: Stat[] = [
-  { id: "travelers", value: 10000, suffix: "+", label: "Wisatawan Puas" },
-  { id: "packages", value: 500, suffix: "+", label: "Paket Perjalanan" },
-  { id: "destinations", value: 50, suffix: "+", label: "Destinasi Populer" },
-  { id: "satisfaction", value: 98, suffix: "%", label: "Tingkat Kepuasan" },
+  { id: "travelers", value: 10000, suffix: "+", label: "Tamu Berangkat" },
+  { id: "packages", value: 500, suffix: "+", label: "Trip Terjadwal" },
+  { id: "destinations", value: 50, suffix: "+", label: "Rute Indonesia" },
+  { id: "satisfaction", value: 98, suffix: "%", label: "Booking Ulang" },
 ];
 
 function AnimatedCounter({

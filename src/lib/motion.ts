@@ -6,29 +6,44 @@ export const heroVariants = {
 };
 
 export const heroTransition = {
-  duration: 0.8,
+  duration: 0.9,
   ease: [0.22, 1, 0.36, 1] as const,
 };
 
 export const fadeInUp: Variants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: 36 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] },
+  },
 };
 
 export const staggerContainer: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.12, delayChildren: 0.1 },
+    transition: { staggerChildren: 0.1, delayChildren: 0.08 },
   },
 };
 
 export const cardHover = {
-  whileHover: { y: -8, scale: 1.02 },
-  transition: { duration: 0.3, ease: "easeOut" as const },
+  whileHover: { y: -10, scale: 1.015 },
+  transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] as const },
+};
+
+export const premiumCardHover = {
+  whileHover: { y: -12 },
+  transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] as const },
+};
+
+export const buttonHover = {
+  whileHover: { scale: 1.03, y: -1 },
+  whileTap: { scale: 0.98 },
+  transition: { duration: 0.2 },
 };
 
 export const defaultViewport = {
   once: true,
-  margin: "-80px" as const,
+  margin: "-60px" as const,
 };

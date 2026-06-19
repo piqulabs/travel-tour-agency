@@ -71,15 +71,13 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="mx-auto mb-12 max-w-2xl text-center sm:mb-14"
         >
-          <span className="text-sm font-semibold uppercase tracking-widest text-primary">
-            Hubungi Kami
-          </span>
-          <h2 className="mt-3 font-heading text-3xl font-bold text-brand-text sm:text-4xl">
-            Siap Merencanakan Liburan Anda?
+          <span className="section-eyebrow">Hubungi Kami</span>
+          <h2 className="section-title mt-4">
+            Ada Pertanyaan? Langsung Chat
           </h2>
-          <p className="mt-4 text-base text-muted-foreground">
-            Tim kami siap membantu memilih paket terbaik dan menjawab semua
-            pertanyaan Anda. Respon cepat via WhatsApp.
+          <p className="section-desc mt-5">
+            Admin kami online Senin–Sabtu, 09.00–18.00 WIB. Di luar jam itu
+            tetap bisa kirim pesan — kami balas pagi harinya.
           </p>
         </motion.div>
 
@@ -138,7 +136,7 @@ export default function Contact() {
                   rel="noopener noreferrer"
                 >
                   <MessageCircle className="size-5" />
-                  Chat via WhatsApp
+                  Chat WhatsApp — Balas Cepat
                 </a>
               </Button>
             </div>
@@ -155,11 +153,11 @@ export default function Contact() {
                           <Send className="size-7" />
                         </div>
                         <h3 className="font-heading text-xl font-semibold text-brand-text">
-                          Pesan Terkirim!
+                          Pesan Diterima!
                         </h3>
                         <p className="mt-2 text-sm text-muted-foreground">
-                          Terima kasih. Tim kami akan menghubungi Anda dalam
-                          1×24 jam kerja.
+                          Admin kami hubungi Anda via WhatsApp dalam 1×24 jam
+                          kerja. Cek juga folder spam kalau pakai email.
                         </p>
                         <Button
                           variant="outline"
@@ -228,14 +226,14 @@ export default function Contact() {
                           <Textarea
                             id="pesan"
                             name="pesan"
-                            placeholder="Ceritakan rencana liburan Anda..."
+                            placeholder="Ceritakan rencana trip Anda — tanggal, jumlah orang, budget..."
                             required
                             className="min-h-28"
                           />
                         </div>
                         <Button type="submit" size="lg" className="w-full">
                           <Send className="size-4" />
-                          Kirim Pesan
+                          Kirim & Tunggu Balasan
                         </Button>
                       </form>
                     )}
@@ -245,10 +243,10 @@ export default function Contact() {
                     <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-primary/15 to-secondary/15 p-6 text-center">
                       <MapPin className="size-10 text-primary" />
                       <p className="font-heading text-lg font-semibold text-brand-text">
-                        Kunjungi Kantor Kami
+                        Kantor Jakarta Selatan
                       </p>
                       <p className="text-sm text-muted-foreground">
-                        Jakarta Selatan, DKI Jakarta
+                        Konsultasi walk-in dengan appointment
                       </p>
                       <div className="mt-2 flex h-44 w-full max-w-xs items-center justify-center overflow-hidden rounded-xl border bg-white/60 backdrop-blur-sm">
                         <iframe

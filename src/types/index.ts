@@ -11,12 +11,14 @@ export interface Destination {
 export interface TravelPackage {
   id: string;
   title: string;
+  summary: string;
   duration: string;
   facilities: string[];
   highlights: string[];
   price: number;
   image: string;
   popular?: boolean;
+  badge?: "best-seller" | "favorit" | "promo";
 }
 
 export interface Testimonial {
@@ -84,4 +86,6 @@ export interface GoogleReview {
   rating: number;
   review: string;
   avatar: string;
+  city: string;
+  verified?: boolean;
 }

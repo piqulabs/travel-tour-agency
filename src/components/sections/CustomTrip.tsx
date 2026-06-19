@@ -17,7 +17,7 @@ export default function CustomTrip() {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const message = [
-      "Halo Nusantara Trip, saya ingin minta penawaran custom trip:",
+      "Halo Nusantara Trip, saya mau minta penawaran custom trip:",
       `Nama: ${form.get("nama")}`,
       `WhatsApp: ${form.get("whatsapp")}`,
       `Jumlah Peserta: ${form.get("peserta")}`,
@@ -48,28 +48,28 @@ export default function CustomTrip() {
             >
               <div className="mb-4 inline-flex w-fit items-center gap-2 rounded-full bg-accent/15 px-3 py-1 text-xs font-semibold text-accent-foreground">
                 <Sparkles className="size-3.5" />
-                Private & Custom Trip
+                Rancang Sendiri
               </div>
               <h2 className="font-heading text-3xl font-bold text-brand-text sm:text-4xl">
-                Buat Perjalanan Sesuai Keinginan Anda
+                Trip Sesuai Budget & Jadwal Anda
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                Belum menemukan paket yang sesuai? Konsultasikan kebutuhan
-                perjalanan Anda dan tim kami akan membantu menyusun itinerary
-                terbaik sesuai budget dan kebutuhan.
+                Nggak cocok sama paket yang ada? Ceritain aja mau ke mana,
+                berapa orang, dan budget-nya. Tim kami susun itinerary dalam
+                1×24 jam — gratis, tanpa harus booking dulu.
               </p>
               <ul className="mt-6 space-y-2 text-sm text-muted-foreground">
                 <li className="flex items-center gap-2">
                   <span className="size-1.5 rounded-full bg-primary" />
-                  Gratis konsultasi tanpa komitmen
+                  Bisa ubah hotel, durasi, dan aktivitas
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="size-1.5 rounded-full bg-primary" />
-                  Itinerary disesuaikan 100%
+                  Cocok buat honeymoon, kantor, atau keluarga besar
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="size-1.5 rounded-full bg-primary" />
-                  Respon dalam 1×24 jam kerja
+                  Penawaran via WhatsApp, bukan form yang hilang
                 </li>
               </ul>
             </motion.div>
@@ -90,11 +90,11 @@ export default function CustomTrip() {
                           <Send className="size-6" />
                         </div>
                         <h3 className="font-heading text-xl font-semibold text-brand-text">
-                          Permintaan Terkirim!
+                          Permintaan Sudah Masuk!
                         </h3>
                         <p className="mt-2 text-sm text-muted-foreground">
-                          Tim kami akan menghubungi Anda melalui WhatsApp
-                          segera.
+                          WhatsApp Anda akan terbuka dengan detail trip.
+                          Admin kami lanjutkan negosiasi harga & jadwal.
                         </p>
                         <Button
                           variant="outline"
@@ -176,12 +176,12 @@ export default function CustomTrip() {
                             htmlFor="destinasi"
                             className="text-sm font-medium text-brand-text"
                           >
-                            Destinasi Impian
+                            Mau Ke Mana?
                           </label>
                           <Input
                             id="destinasi"
                             name="destinasi"
-                            placeholder="Bali, Labuan Bajo, Raja Ampat..."
+                            placeholder="Contoh: Bali 4 hari, hotel dekat pantai"
                             required
                             className="h-11"
                           />
@@ -191,19 +191,19 @@ export default function CustomTrip() {
                             htmlFor="budget"
                             className="text-sm font-medium text-brand-text"
                           >
-                            Budget Perjalanan
+                            Budget per Orang
                           </label>
                           <Input
                             id="budget"
                             name="budget"
-                            placeholder="Contoh: Rp5.000.000 / orang"
+                            placeholder="Contoh: Rp 4–5 juta/orang"
                             required
                             className="h-11"
                           />
                         </div>
                         <Button type="submit" size="lg" className="w-full">
                           <Send className="size-4" />
-                          Minta Penawaran
+                          Minta Itinerary via WhatsApp
                         </Button>
                       </form>
                     )}

@@ -2,7 +2,7 @@
 
 import SafeImage from "@/components/shared/SafeImage";
 import { motion } from "framer-motion";
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, BadgeCheck } from "lucide-react";
 
 import { Card, CardContent } from "@/components/ui/card";
 import { testimonials } from "@/data/testimonials";
@@ -20,9 +20,7 @@ function StarRating({ rating }: { rating: number }) {
         <Star
           key={i}
           className={`size-4 ${
-            i < rating
-              ? "fill-accent text-accent"
-              : "fill-muted text-muted"
+            i < rating ? "fill-accent text-accent" : "fill-muted text-muted"
           }`}
         />
       ))}
@@ -40,17 +38,15 @@ export default function Testimonials() {
           viewport={defaultViewport}
           variants={fadeInUp}
           transition={{ duration: 0.6 }}
-          className="mx-auto mb-12 max-w-2xl text-center sm:mb-14"
+          className="section-header mx-auto mb-14 max-w-2xl text-center sm:mb-16"
         >
-          <span className="text-sm font-semibold uppercase tracking-widest text-primary">
-            Testimoni
-          </span>
-          <h2 className="mt-3 font-heading text-3xl font-bold text-brand-text sm:text-4xl">
-            Cerita dari Para Wisatawan Kami
+          <span className="section-eyebrow">Testimoni</span>
+          <h2 className="section-title mt-4">
+            Apa Kata Mereka Setelah Pulang
           </h2>
-          <p className="mt-4 text-base text-muted-foreground">
-            Pengalaman nyata dari pelanggan yang sudah mempercayakan
-            perjalanan mereka kepada Nusantara Trip.
+          <p className="section-desc mt-5">
+            Bukan testimoni fiktif — ini cerita tamu yang sudah trip bareng
+            kami. Nama, kota, dan detailnya asli.
           </p>
         </motion.div>
 
@@ -59,20 +55,20 @@ export default function Testimonials() {
           whileInView="visible"
           viewport={defaultViewport}
           variants={staggerContainer}
-          className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
         >
           {testimonials.map((testimonial) => (
             <motion.div key={testimonial.id} variants={fadeInUp}>
               <motion.div {...cardHover} className="h-full">
-                <Card className="premium-card relative h-full">
-                  <CardContent className="flex h-full flex-col gap-4 p-6">
-                    <Quote className="size-7 text-primary/20" />
+                <Card className="premium-card relative h-full overflow-hidden transition-shadow duration-300 hover:shadow-xl">
+                  <CardContent className="flex h-full flex-col gap-4 p-7">
+                    <Quote className="size-8 text-primary/15" />
                     <p className="flex-1 text-sm leading-relaxed text-muted-foreground">
                       &ldquo;{testimonial.review}&rdquo;
                     </p>
                     <StarRating rating={testimonial.rating} />
-                    <div className="flex items-center gap-3 border-t pt-4">
-                      <div className="relative size-12 overflow-hidden rounded-full ring-2 ring-primary/10">
+                    <div className="flex items-center gap-3 border-t border-border/60 pt-5">
+                      <div className="relative size-12 overflow-hidden rounded-full ring-2 ring-primary/15">
                         <SafeImage
                           src={testimonial.image}
                           alt={testimonial.name}
@@ -83,10 +79,13 @@ export default function Testimonials() {
                           sizes="48px"
                         />
                       </div>
-                      <div>
-                        <p className="font-semibold text-brand-text">
-                          {testimonial.name}
-                        </p>
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center gap-1.5">
+                          <p className="font-bold text-brand-text">
+                            {testimonial.name}
+                          </p>
+                          <BadgeCheck className="size-4 shrink-0 text-primary" />
+                        </div>
                         <p className="text-xs text-muted-foreground">
                           {testimonial.location}
                         </p>

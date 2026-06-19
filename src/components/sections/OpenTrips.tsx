@@ -28,15 +28,14 @@ export default function OpenTrips() {
           transition={{ duration: 0.6 }}
           className="mx-auto mb-14 max-w-2xl text-center"
         >
-          <span className="text-sm font-semibold uppercase tracking-widest text-primary">
-            Open Trip
-          </span>
-          <h2 className="mt-3 font-heading text-3xl font-bold text-brand-text sm:text-4xl lg:text-5xl">
-            Jadwal Open Trip Terdekat
+          <span className="section-eyebrow">Open Trip</span>
+          <h2 className="section-title mt-4">
+            Jadwal Keberangkatan Terdekat
           </h2>
-          <p className="mt-4 text-muted-foreground">
-            Gabung dengan peserta lain dan nikmati pengalaman traveling yang
-            seru dengan harga lebih hemat. Kuota terbatas — booking sekarang!
+          <p className="section-desc mt-5">
+            Mau liburan hemat tapi tetap rame? Gabung open trip kami — sudah
+            ada teman seperjalanan, guide, dan itinerary fix. Tinggal pilih
+            tanggal.
           </p>
         </motion.div>
 
@@ -112,11 +111,11 @@ export default function OpenTrips() {
                         </div>
                         <Button asChild size="sm">
                           <a
-                            href={`${WHATSAPP_URL}?text=${encodeURIComponent(`Halo, saya mau booking open trip ${trip.destination} tanggal ${trip.departureDate}`)}`}
+                            href={`${WHATSAPP_URL}?text=${encodeURIComponent(`Halo Nusantara Trip, saya mau amankan kursi open trip ${trip.destination} tanggal ${trip.departureDate}. Bisa info sisa seat & cara DP?`)}`}
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            Booking
+                            Amankan Kursi
                           </a>
                         </Button>
                       </div>

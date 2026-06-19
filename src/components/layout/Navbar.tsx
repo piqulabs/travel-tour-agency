@@ -66,7 +66,7 @@ export default function Navbar() {
                 scrolled ? "text-muted-foreground" : "text-white/70"
               )}
             >
-              Agen Wisata Terpercaya
+              Berizin · Sejak 2012
             </span>
           </div>
         </Link>
@@ -99,7 +99,7 @@ export default function Navbar() {
               className="gap-2"
             >
               <MessageCircle className="size-4" />
-              WhatsApp
+              Tanya Jadwal
             </a>
           </Button>
 
@@ -153,7 +153,7 @@ export default function Navbar() {
                     onClick={() => setOpen(false)}
                   >
                     <MessageCircle className="size-4" />
-                    Chat WhatsApp
+                    Chat — Tanya Jadwal
                   </a>
                 </Button>
               </div>
