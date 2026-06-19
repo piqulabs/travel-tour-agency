@@ -1,0 +1,122 @@
+import type { TravelPackage } from "@/types";
+import { images } from "@/data/images";
+
+export const packages: TravelPackage[] = [
+  {
+    id: "open-trip-labuan-bajo",
+    title: "Open Trip Labuan Bajo 3 Hari 2 Malam",
+    duration: "3 Hari 2 Malam",
+    facilities: [
+      "Kapal phinisi AC",
+      "Makan 6x selama trip",
+      "Snorkeling gear",
+      "Tiket masuk Taman Nasional Komodo",
+      "Tour guide lokal",
+    ],
+    highlights: [
+      "Pulau Padar & Pink Beach",
+      "Trekking Komodo Island",
+      "Manta Point snorkeling",
+    ],
+    price: 3850000,
+    image: images.destinations["labuan-bajo"],
+    popular: true,
+  },
+  {
+    id: "liburan-keluarga-bali",
+    title: "Liburan Keluarga Bali 4 Hari 3 Malam",
+    duration: "4 Hari 3 Malam",
+    facilities: [
+      "Hotel bintang 4",
+      "Sarapan & 1x makan siang",
+      "Mobil AC + driver",
+      "Tiket wahana Waterbom",
+      "Asuransi perjalanan",
+    ],
+    highlights: [
+      "Taman Ayun & Tanah Lot",
+      "Ubud monkey forest",
+      "Nusa Dua beach day",
+    ],
+    price: 4200000,
+    image: images.destinations.bali,
+    popular: true,
+  },
+  {
+    id: "explore-raja-ampat",
+    title: "Explore Raja Ampat 5 Hari 4 Malam",
+    duration: "5 Hari 4 Malam",
+    facilities: [
+      "Resort tepi pantai",
+      "Speedboat antar pulau",
+      "Makan 3x sehari",
+      "Snorkeling 4 spot",
+      "Pemandu lokal berpengalaman",
+    ],
+    highlights: [
+      "Piaynemo viewpoint",
+      "Wayag island hopping",
+      "Arborek village",
+    ],
+    price: 9800000,
+    image: images.destinations["raja-ampat"],
+    popular: true,
+  },
+  {
+    id: "wisata-bromo-sunrise",
+    title: "Wisata Bromo Sunrise 2 Hari 1 Malam",
+    duration: "2 Hari 1 Malam",
+    facilities: [
+      "Hotel dekat Bromo",
+      "Jeep 4WD sunrise tour",
+      "Makan 3x",
+      "Tiket masuk kawasan Bromo",
+      "Guide lokal",
+    ],
+    highlights: [
+      "Sunrise Penanjakan",
+      "Kawah Bromo & Laut Pasir",
+      "Bukit Teletubbies",
+    ],
+    price: 1150000,
+    image: images.destinations.bromo,
+  },
+  {
+    id: "tour-yogyakarta-heritage",
+    title: "Tour Yogyakarta Heritage 3 Hari 2 Malam",
+    duration: "3 Hari 2 Malam",
+    facilities: [
+      "Hotel strategis Jogja",
+      "Mobil AC + driver",
+      "Makan 5x",
+      "Tiket Borobudur & Prambanan",
+      "Guide wisata bersertifikat",
+    ],
+    highlights: [
+      "Candi Borobudur sunrise",
+      "Keraton & Taman Sari",
+      "Malioboro night tour",
+    ],
+    price: 2450000,
+    image: images.destinations.yogyakarta,
+  },
+  {
+    id: "lombok-island-adventure",
+    title: "Lombok Island Adventure 4 Hari 3 Malam",
+    duration: "4 Hari 3 Malam",
+    facilities: [
+      "Resort Senggigi",
+      "Fast boat ke Gili",
+      "Makan 7x",
+      "Snorkeling Gili Trawangan",
+      "Transport lokal",
+    ],
+    highlights: [
+      "Gili Trawangan island",
+      "Pantai Tanjung Aan",
+      "Desa Sade budaya Sasak",
+    ],
+    price: 3650000,
+    image: images.destinations.lombok,
+  },
+];
