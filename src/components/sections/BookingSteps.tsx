@@ -87,10 +87,10 @@ export default function BookingSteps() {
                     {step.step}
                   </span>
                 </div>
-                <h3 className="font-heading text-lg font-semibold text-brand-text">
+                <h3 className="font-sans text-lg font-semibold text-brand-text">
                   {step.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                <p className="mt-2 text-sm leading-[1.6] text-muted-foreground">
                   {step.description}
                 </p>
               </motion.div>

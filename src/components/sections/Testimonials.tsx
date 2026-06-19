@@ -63,7 +63,7 @@ export default function Testimonials() {
                 <Card className="premium-card relative h-full overflow-hidden transition-shadow duration-300 hover:shadow-xl">
                   <CardContent className="flex h-full flex-col gap-4 p-7">
                     <Quote className="size-8 text-primary/15" />
-                    <p className="flex-1 text-sm leading-relaxed text-muted-foreground">
+                    <p className="flex-1 text-[15px] leading-[1.65] text-muted-foreground sm:text-sm sm:leading-[1.7]">
                       &ldquo;{testimonial.review}&rdquo;
                     </p>
                     <StarRating rating={testimonial.rating} />
@@ -81,7 +81,7 @@ export default function Testimonials() {
                       </div>
                       <div className="min-w-0 flex-1">
                         <div className="flex items-center gap-1.5">
-                          <p className="font-bold text-brand-text">
+                          <p className="font-sans text-sm font-semibold text-brand-text">
                             {testimonial.name}
                           </p>
                           <BadgeCheck className="size-4 shrink-0 text-primary" />

@@ -69,13 +69,13 @@ export default function WhyChooseUs() {
           transition={{ duration: 0.6 }}
           className="mx-auto mb-12 max-w-2xl text-center sm:mb-14"
         >
-          <span className="text-sm font-semibold uppercase tracking-widest text-secondary">
+          <span className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-secondary">
             Kenapa Kami
           </span>
-          <h2 className="mt-3 font-heading text-3xl font-bold sm:text-4xl">
+              <h2 className="font-heading text-3xl leading-[1.12] tracking-[-0.02em] sm:text-4xl">
             Bukan Sekadar Jual Tiket
           </h2>
-          <p className="mt-4 text-white/65">
+          <p className="mt-4 text-[15px] leading-[1.65] text-white/60 sm:text-base">
             Kami tim operasional di Jakarta yang tiap bulan sendiri ke destinasi.
             Yang kami jual: perjalanan yang beneran jalan sesuai rencana.
           </p>
@@ -96,10 +96,10 @@ export default function WhyChooseUs() {
                     <div className="flex size-12 items-center justify-center rounded-xl bg-primary/25 text-secondary">
                       <feature.icon className="size-6" />
                     </div>
-                    <h3 className="font-heading text-lg font-semibold">
+                    <h3 className="font-sans text-base font-semibold leading-snug sm:text-lg">
                       {feature.title}
                     </h3>
-                    <p className="text-sm leading-relaxed text-white/60">
+                    <p className="text-sm leading-[1.6] text-white/55">
                       {feature.description}
                     </p>
                   </CardContent>

@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import { Menu, Compass, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
+
+import ScrollLink from "@/components/shared/ScrollLink";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -31,7 +32,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
+    const handleScroll = () => setScrolled(window.scrollY > 16);
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
@@ -40,21 +41,31 @@ export default function Navbar() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-300",
+        "fixed inset-x-0 top-0 z-50 transition-all duration-500",
         scrolled
-          ? "border-b border-border/60 bg-white/90 shadow-sm backdrop-blur-lg"
-          : "bg-transparent"
+          ? "border-b border-border/40 bg-white/85 shadow-[0_1px_0_rgba(0,0,0,0.03)] backdrop-blur-xl"
+          : "bg-gradient-to-b from-black/50 via-black/20 to-transparent backdrop-blur-[6px]"
       )}
     >
-      <nav className="container-wide flex h-16 items-center justify-between px-4 sm:h-[4.5rem] sm:px-6 lg:px-8">
-        <Link href="#beranda" className="group flex items-center gap-2.5">
-          <span className="flex size-9 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-md shadow-primary/20 transition-transform group-hover:scale-105">
-            <Compass className="size-4" />
+      <nav className="container-wide flex h-[4.25rem] items-center justify-between gap-6 px-4 sm:h-[4.75rem] sm:px-6 lg:px-8">
+        <ScrollLink
+          sectionId="beranda"
+          className="group flex shrink-0 items-center gap-3"
+        >
+          <span
+            className={cn(
+              "flex size-9 items-center justify-center rounded-lg transition-all duration-300 sm:size-10",
+              scrolled
+                ? "bg-primary text-white shadow-sm"
+                : "border border-white/15 bg-white/10 text-white backdrop-blur-sm"
+            )}
+          >
+            <Compass className="size-4" strokeWidth={1.75} />
           </span>
-          <div className="flex flex-col">
+          <div className="flex flex-col gap-0.5">
             <span
               className={cn(
-                "font-heading text-base font-bold leading-none tracking-tight transition-colors sm:text-lg",
+                "type-nav-brand transition-colors",
                 scrolled ? "text-brand-text" : "text-white"
               )}
             >
@@ -62,35 +73,37 @@ export default function Navbar() {
             </span>
             <span
               className={cn(
-                "text-[10px] font-medium transition-colors",
-                scrolled ? "text-muted-foreground" : "text-white/70"
+                "font-sans text-[10px] font-medium tracking-[0.04em] transition-colors",
+                scrolled ? "text-muted-foreground" : "text-white/50"
               )}
             >
               Berizin · Sejak 2012
             </span>
           </div>
-        </Link>
+        </ScrollLink>
 
-        <div className="hidden items-center gap-7 lg:flex">
+        <div className="hidden items-center gap-8 xl:gap-9 lg:flex">
           {navLinks.map((link) => (
-            <Link
+            <ScrollLink
               key={link.href}
-              href={link.href}
+              sectionId={link.href.slice(1)}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-secondary",
-                scrolled ? "text-brand-text/80" : "text-white/90"
+                "font-sans text-[13px] font-medium tracking-[0.01em] transition-colors duration-200",
+                scrolled
+                  ? "text-brand-text/70 hover:text-brand-text"
+                  : "text-white/75 hover:text-white"
               )}
             >
               {link.label}
-            </Link>
+            </ScrollLink>
           ))}
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2.5">
           <Button
             asChild
             size="sm"
-            className="hidden bg-[#25D366] text-white shadow-sm hover:bg-[#20bd5a] sm:inline-flex"
+            className="hidden h-9 rounded-lg bg-[#25D366] px-4 text-[13px] font-semibold text-white shadow-sm hover:bg-[#20bd5a] sm:inline-flex"
           >
             <a
               href={WHATSAPP_URL}
@@ -98,7 +111,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="gap-2"
             >
-              <MessageCircle className="size-4" />
+              <MessageCircle className="size-3.5" />
               Konsultasi Gratis
             </a>
           </Button>
@@ -109,42 +122,42 @@ export default function Navbar() {
                 variant="ghost"
                 size="icon"
                 className={cn(
-                  "lg:hidden",
+                  "size-9 rounded-lg lg:hidden",
                   scrolled
                     ? "text-brand-text hover:bg-muted"
                     : "text-white hover:bg-white/10"
                 )}
                 aria-label="Buka menu"
               >
-                <Menu className="size-5" />
+                <Menu className="size-5" strokeWidth={1.5} />
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-full max-w-sm">
               <SheetHeader>
-                <SheetTitle className="font-heading text-xl">
+                <SheetTitle className="type-nav-brand text-xl">
                   {BRAND.name}
                 </SheetTitle>
               </SheetHeader>
-              <div className="flex flex-col gap-1 px-4">
+              <div className="flex flex-col gap-0.5 px-4">
                 {navLinks.map((link, index) => (
                   <motion.div
                     key={link.href}
-                    initial={{ opacity: 0, x: 20 }}
+                    initial={{ opacity: 0, x: 16 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.05 }}
+                    transition={{ delay: index * 0.04 }}
                   >
-                    <Link
-                      href={link.href}
+                    <ScrollLink
+                      sectionId={link.href.slice(1)}
                       onClick={() => setOpen(false)}
-                      className="block rounded-lg px-3 py-3.5 text-base font-medium text-brand-text transition-colors hover:bg-muted"
+                      className="block rounded-lg px-3 py-3.5 text-[15px] font-medium text-brand-text transition-colors hover:bg-muted"
                     >
                       {link.label}
-                    </Link>
+                    </ScrollLink>
                   </motion.div>
                 ))}
                 <Button
                   asChild
-                  className="mt-4 w-full bg-[#25D366] text-white hover:bg-[#20bd5a]"
+                  className="mt-5 h-11 w-full rounded-lg bg-[#25D366] text-white hover:bg-[#20bd5a]"
                 >
                   <a
                     href={WHATSAPP_URL}

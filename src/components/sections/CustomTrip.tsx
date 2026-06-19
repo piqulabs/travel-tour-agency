@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, Sparkles } from "lucide-react";
+import { Send } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -46,14 +46,11 @@ export default function CustomTrip() {
               transition={{ duration: 0.6 }}
               className="flex flex-col justify-center p-6 sm:p-10 lg:p-14"
             >
-              <div className="mb-4 inline-flex w-fit items-center gap-2 rounded-full bg-accent/15 px-3 py-1 text-xs font-semibold text-accent-foreground">
-                <Sparkles className="size-3.5" />
-                Rancang Sendiri
-              </div>
-              <h2 className="font-heading text-3xl font-bold text-brand-text sm:text-4xl">
+              <span className="section-eyebrow">Custom Trip</span>
+              <h2 className="section-title text-brand-text">
                 Trip Sesuai Budget & Jadwal Anda
               </h2>
-              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+              <p className="mt-4 text-[15px] leading-[1.65] text-muted-foreground sm:text-base">
                 Nggak cocok sama paket yang ada? Ceritain aja mau ke mana,
                 berapa orang, dan budget-nya. Tim kami susun itinerary dalam
                 1×24 jam — gratis, tanpa harus booking dulu.

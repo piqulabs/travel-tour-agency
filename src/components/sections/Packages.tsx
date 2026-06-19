@@ -2,10 +2,16 @@
 
 import SafeImage from "@/components/shared/SafeImage";
 import { motion } from "framer-motion";
-import { Check, Clock, MapPin, ArrowRight } from "lucide-react";
+import {
+  ArrowRight,
+  Calendar,
+  Clock,
+  MapPin,
+  Users,
+} from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { packages } from "@/data/packages";
 import {
   fadeInUp,
@@ -15,25 +21,10 @@ import {
   defaultViewport,
 } from "@/lib/motion";
 import { formatPrice, WHATSAPP_URL } from "@/lib/utils";
-import { cn } from "@/lib/utils";
 
-const BADGE_CONFIG = {
-  "best-seller": {
-    label: "Best Seller",
-    emoji: "🔥",
-    className: "bg-gradient-to-r from-orange-500 to-red-500 text-white",
-  },
-  favorit: {
-    label: "Favorit Wisatawan",
-    emoji: "⭐",
-    className: "bg-gradient-to-r from-amber-400 to-yellow-500 text-amber-950",
-  },
-  promo: {
-    label: "Promo",
-    emoji: "⚡",
-    className: "bg-gradient-to-r from-primary to-secondary text-white",
-  },
-} as const;
+const metaIconClass =
+  "size-3.5 shrink-0 text-muted-foreground/70";
+const metaTextClass = "text-sm text-muted-foreground";
 
 export default function Packages() {
   return (
@@ -48,13 +39,10 @@ export default function Packages() {
           className="section-header mx-auto mb-14 max-w-2xl text-center sm:mb-16"
         >
           <span className="section-eyebrow">Paket Wisata</span>
-          <h2 className="section-title mt-4">
-            Paket Wisata Siap Berangkat
-          </h2>
+          <h2 className="section-title mt-4">Paket Wisata Siap Berangkat</h2>
           <p className="section-desc mt-5">
-            Harga sudah termasuk akomodasi, transport, dan aktivitas utama.
-            Nggak ada biaya tersembunyi — semua kami jelasin di itinerary
-            sebelum Anda transfer DP.
+            Durasi, lokasi, jadwal keberangkatan, dan harga — semua tertera
+            jelas sebelum Anda booking.
           </p>
         </motion.div>
 
@@ -65,117 +53,105 @@ export default function Packages() {
           variants={staggerContainer}
           className="grid gap-8 md:grid-cols-2 xl:grid-cols-3"
         >
-          {packages.map((pkg) => {
-            const badge = pkg.badge ? BADGE_CONFIG[pkg.badge] : null;
-
-            return (
-              <motion.div key={pkg.id} variants={fadeInUp}>
-                <motion.div {...premiumCardHover} className="group h-full">
-                  <Card className="package-card relative flex h-full flex-col overflow-hidden">
-                    {badge && (
-                      <div
-                        className={cn(
-                          "absolute left-4 top-4 z-20 flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-bold shadow-lg",
-                          badge.className
-                        )}
-                      >
-                        <span>{badge.emoji}</span>
-                        {badge.label}
-                      </div>
-                    )}
-                    <div className="relative aspect-[16/10] overflow-hidden">
-                      <SafeImage
-                        src={pkg.image}
-                        alt={pkg.title}
-                        category="package"
-                        context={`Packages: ${pkg.title}`}
-                        fill
-                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                      />
-                      <div className="absolute inset-0 image-overlay-gradient opacity-90 transition-opacity duration-500 group-hover:opacity-100" />
+          {packages.map((pkg) => (
+            <motion.div key={pkg.id} variants={fadeInUp}>
+              <motion.div {...premiumCardHover} className="group h-full">
+                <Card className="package-card flex h-full flex-col overflow-hidden">
+                  <div className="relative aspect-[16/10] overflow-hidden">
+                    <SafeImage
+                      src={pkg.image}
+                      alt={pkg.title}
+                      category="package"
+                      context={`Packages: ${pkg.title}`}
+                      fill
+                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                    />
+                    <div className="image-overlay-gradient absolute inset-0" />
+                    <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+                      <span className="inline-flex items-center gap-1.5 text-sm font-medium text-white">
+                        <MapPin
+                          className="size-3.5 text-white/70"
+                          strokeWidth={1.5}
+                        />
+                        {pkg.location}
+                      </span>
+                      <span className="rounded-md bg-white/15 px-2 py-0.5 text-xs font-semibold tracking-wide text-white backdrop-blur-sm">
+                        {pkg.durationCode}
+                      </span>
                     </div>
-                    <CardHeader className="px-6 pb-2 pt-6">
-                      <CardTitle className="font-heading text-xl leading-snug tracking-tight">
+                  </div>
+
+                  <CardContent className="flex flex-1 flex-col gap-5 p-6">
+                    <div>
+                      <h3 className="type-card-title text-brand-text">
                         {pkg.title}
-                      </CardTitle>
-                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                      </h3>
+                      <p className="mt-2 line-clamp-2 text-sm leading-[1.6] text-muted-foreground">
                         {pkg.summary}
                       </p>
-                      <div className="mt-2 flex items-center gap-1.5 text-sm text-muted-foreground">
-                        <Clock className="size-4 text-secondary" />
-                        {pkg.duration}
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-x-4 gap-y-2.5 border-y border-border/50 py-4">
+                      <div className="flex items-center gap-2">
+                        <Clock className={metaIconClass} strokeWidth={1.5} />
+                        <span className={metaTextClass}>{pkg.duration}</span>
                       </div>
-                    </CardHeader>
-                    <CardContent className="flex flex-1 flex-col gap-6 px-6 pb-7">
+                      <div className="flex items-center gap-2">
+                        <Users className={metaIconClass} strokeWidth={1.5} />
+                        <span className={metaTextClass}>{pkg.groupSize}</span>
+                      </div>
+                      <div className="col-span-2 flex items-center gap-2">
+                        <Calendar className={metaIconClass} strokeWidth={1.5} />
+                        <span className={metaTextClass}>{pkg.schedule}</span>
+                      </div>
+                    </div>
+
+                    <ul className="space-y-1.5">
+                      {pkg.highlights.slice(0, 3).map((item) => (
+                        <li
+                          key={item}
+                          className="text-sm text-muted-foreground before:mr-2 before:text-muted-foreground/40 before:content-['·']"
+                        >
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className="mt-auto flex flex-col gap-4 border-t border-border/50 pt-5">
                       <div>
-                        <p className="mb-2.5 text-xs font-bold uppercase tracking-widest text-primary/80">
-                          Fasilitas
+                        <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                          Mulai dari
                         </p>
-                        <ul className="space-y-2">
-                          {pkg.facilities.map((item) => (
-                            <li
-                              key={item}
-                              className="flex items-start gap-2.5 text-sm"
-                            >
-                              <Check className="mt-0.5 size-4 shrink-0 text-primary" />
-                              {item}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div>
-                        <p className="mb-2.5 flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-primary/80">
-                          <MapPin className="size-3.5" />
-                          Destinasi
+                          <p className="type-price">
+                          {formatPrice(pkg.price)}
                         </p>
-                        <ul className="space-y-2">
-                          {pkg.highlights.map((item) => (
-                            <li
-                              key={item}
-                              className="flex items-start gap-2.5 text-sm text-muted-foreground"
-                            >
-                              <span className="mt-2 size-1.5 shrink-0 rounded-full bg-secondary" />
-                              {item}
-                            </li>
-                          ))}
-                        </ul>
+                        <p className="text-xs text-muted-foreground">
+                          per orang
+                        </p>
                       </div>
-                      <div className="mt-auto flex flex-col gap-4 border-t border-border/60 pt-5">
-                        <div>
-                          <p className="text-xs font-medium text-muted-foreground">
-                            Mulai dari
-                          </p>
-                          <p className="font-heading text-2xl font-bold tracking-tight text-primary sm:text-3xl">
-                            {formatPrice(pkg.price)}
-                          </p>
-                          <p className="text-xs text-muted-foreground">
-                            per orang
-                          </p>
-                        </div>
-                        <motion.div {...buttonHover}>
-                          <Button
-                            asChild
-                            size="lg"
-                            className="h-13 w-full rounded-xl bg-primary text-base font-bold shadow-xl shadow-primary/30 transition-shadow hover:bg-primary/90 hover:shadow-2xl hover:shadow-primary/25 sm:h-12"
+                      <motion.div {...buttonHover}>
+                        <Button
+                          asChild
+                          size="lg"
+                          className="type-btn h-12 w-full rounded-xl bg-primary shadow-lg shadow-primary/20 hover:bg-primary/90"
+                        >
+                          <a
+                            href={`${WHATSAPP_URL}?text=${encodeURIComponent(`Halo Nusantara Trip, saya tertarik paket ${pkg.title} (${pkg.location}). Bisa kirim itinerary & info DP?`)}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
                           >
-                            <a
-                              href={`${WHATSAPP_URL}?text=${encodeURIComponent(`Halo Nusantara Trip, saya tertarik paket ${pkg.title}. Bisa kirim itinerary lengkap & info DP?`)}`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              Pesan Sekarang
-                              <ArrowRight className="size-4" />
-                            </a>
-                          </Button>
-                        </motion.div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
+                            Pesan Sekarang
+                            <ArrowRight className="size-4" />
+                          </a>
+                        </Button>
+                      </motion.div>
+                    </div>
+                  </CardContent>
+                </Card>
               </motion.div>
-            );
-          })}
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>

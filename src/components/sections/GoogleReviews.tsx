@@ -46,7 +46,7 @@ export default function GoogleReviews() {
                 />
               ))}
             </div>
-            <p className="mt-3 font-heading text-4xl font-bold tracking-tight text-brand-text sm:text-5xl">
+            <p className="mt-3 font-heading text-4xl leading-none tracking-[-0.025em] text-brand-text sm:text-5xl">
               {BRAND.googleRating}
               <span className="text-2xl font-medium text-muted-foreground">
                 /5
@@ -88,7 +88,7 @@ export default function GoogleReviews() {
                       </div>
                       <div className="min-w-0 flex-1">
                         <div className="flex items-center gap-1.5">
-                          <p className="truncate text-sm font-bold text-brand-text">
+                          <p className="truncate font-sans text-sm font-semibold text-brand-text">
                             {review.name}
                           </p>
                           {review.verified && (
@@ -115,7 +115,7 @@ export default function GoogleReviews() {
                         />
                       ))}
                     </div>
-                    <p className="line-clamp-4 text-sm leading-relaxed text-muted-foreground">
+                    <p className="line-clamp-4 text-sm leading-[1.65] text-muted-foreground">
                       &ldquo;{review.review}&rdquo;
                     </p>
                     {review.verified && (

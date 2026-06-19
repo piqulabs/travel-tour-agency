@@ -1,7 +1,7 @@
 "use client";
 
 import SafeImage from "@/components/shared/SafeImage";
-import Link from "next/link";
+import ScrollLink from "@/components/shared/ScrollLink";
 import { motion } from "framer-motion";
 import { ArrowRight, MapPin } from "lucide-react";
 
@@ -69,42 +69,30 @@ export default function Destinations() {
                     <div className="absolute bottom-4 left-4 right-4">
                       <div className="flex items-center gap-1.5 text-white">
                         <MapPin className="size-4 text-secondary" />
-                        <span className="text-lg font-semibold">
+                        <span className="text-lg font-sans font-semibold text-white">
                           {destination.title}
                         </span>
                       </div>
                     </div>
                   </div>
                   <CardContent className="space-y-4 p-5">
-                    <p className="line-clamp-2 text-sm leading-relaxed text-muted-foreground">
+                    <p className="line-clamp-2 text-sm leading-[1.6] text-muted-foreground">
                       {destination.description}
                     </p>
-                    {destination.highlights && (
-                      <div className="flex flex-wrap gap-1.5">
-                        {destination.highlights.map((h) => (
-                          <span
-                            key={h}
-                            className="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary"
-                          >
-                            {h}
-                          </span>
-                        ))}
-                      </div>
-                    )}
                     <div className="flex items-center justify-between border-t pt-4">
                       <div>
                         <p className="text-xs text-muted-foreground">
                           Mulai dari
                         </p>
-                        <p className="text-lg font-bold text-primary">
+                        <p className="type-price text-lg sm:text-xl">
                           {formatPrice(destination.startingPrice)}
                         </p>
                       </div>
                       <Button asChild size="sm" variant="outline" className="gap-1 font-semibold">
-                        <Link href="#open-trip">
+                        <ScrollLink sectionId="open-trip">
                           Lihat Open Trip
                           <ArrowRight className="size-3.5" />
-                        </Link>
+                        </ScrollLink>
                       </Button>
                     </div>
                   </CardContent>

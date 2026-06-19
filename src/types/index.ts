@@ -12,13 +12,14 @@ export interface TravelPackage {
   id: string;
   title: string;
   summary: string;
+  location: string;
   duration: string;
-  facilities: string[];
+  durationCode: string;
+  groupSize: string;
+  schedule: string;
   highlights: string[];
   price: number;
   image: string;
-  popular?: boolean;
-  badge?: "best-seller" | "favorit" | "promo";
 }
 
 export interface Testimonial {
@@ -69,20 +70,16 @@ export interface NavLink {
   href: string;
 }
 
-export type OpenTripBadge =
-  | "best-seller"
-  | "popular"
-  | "this-week";
-
 export interface OpenTrip {
   id: string;
   destination: string;
+  location: string;
+  durationCode: string;
   departureDate: string;
   seatsLeft: number;
   totalSeats: number;
   price: number;
   image: string;
-  badges?: OpenTripBadge[];
 }
 
 export interface GoogleReview {

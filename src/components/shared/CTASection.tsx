@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import ScrollLink from "@/components/shared/ScrollLink";
 import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
 
@@ -46,13 +46,12 @@ export default function CTASection({
         >
           <h2
             className={cn(
-              "font-heading text-2xl font-bold text-balance sm:text-3xl lg:text-4xl",
-              "text-white"
+              "section-title text-balance text-white",
             )}
           >
             {title}
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
+          <p className="mx-auto mt-4 max-w-xl text-[15px] leading-[1.65] text-white/82 sm:text-base sm:leading-relaxed">
             {description}
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
@@ -81,10 +80,10 @@ export default function CTASection({
                 variant="outline"
                 className="h-12 min-w-[200px] border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white"
               >
-                <Link href="#paket">
+                <ScrollLink sectionId="paket">
                   {secondaryLabel}
                   <ArrowRight className="size-4" />
-                </Link>
+                </ScrollLink>
               </Button>
             )}
           </div>

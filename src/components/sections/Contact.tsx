@@ -207,7 +207,7 @@ export default function Contact() {
                             htmlFor="destinasi"
                             className="text-sm font-medium text-brand-text"
                           >
-                            Destinasi yang Diminati
+                            Destinasi
                           </label>
                           <Input
                             id="destinasi"

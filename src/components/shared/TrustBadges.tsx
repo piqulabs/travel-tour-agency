@@ -40,7 +40,7 @@ export default function TrustBadges() {
                 <item.icon className="size-3.5 text-primary" />
               </div>
               <span className="text-xs font-semibold text-brand-text sm:text-sm">
-                ✓ {item.label}
+                {item.label}
               </span>
             </motion.div>
           ))}

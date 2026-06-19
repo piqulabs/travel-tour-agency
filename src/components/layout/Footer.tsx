@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Compass, Camera, Mail, Phone, MapPin } from "lucide-react";
 
 import { Separator } from "@/components/ui/separator";
@@ -34,16 +33,16 @@ export default function Footer() {
       <div className="container-wide section-padding !pb-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-6 lg:gap-8">
           <div className="space-y-4 sm:col-span-2 lg:col-span-2">
-            <Link href="#beranda" className="flex items-center gap-2.5">
+            <a href="#beranda" className="flex items-center gap-2.5">
               <span className="flex size-10 items-center justify-center rounded-xl bg-primary shadow-lg shadow-primary/30">
                 <Compass className="size-5 text-white" />
               </span>
               <div>
-                <p className="font-heading text-xl font-bold">{BRAND.name}</p>
+                <p className="type-nav-brand text-xl text-white">{BRAND.name}</p>
                 <p className="text-xs text-white/55">{BRAND.tagline}</p>
               </div>
-            </Link>
-            <p className="max-w-sm text-sm leading-relaxed text-white/65">
+            </a>
+            <p className="max-w-sm text-sm leading-[1.65] text-white/65">
               Agen wisata berizin Kemenparekraf sejak 2012. Open trip, private
               tour, dan paket keluarga ke seluruh Indonesia — dihandle tim
               operasional di Jakarta.
@@ -67,61 +66,61 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white/90">
+            <h3 className="mb-4 font-sans text-xs font-semibold uppercase tracking-[0.12em] text-white/85">
               Destinasi Populer
             </h3>
             <ul className="space-y-2.5">
               {popularDestinations.map((item) => (
                 <li key={item.label}>
-                  <Link
+                  <a
                     href={item.href}
                     className="text-sm text-white/60 transition-colors hover:text-secondary"
                   >
                     {item.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
 
           <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white/90">
+            <h3 className="mb-4 font-sans text-xs font-semibold uppercase tracking-[0.12em] text-white/85">
               Paket Populer
             </h3>
             <ul className="space-y-2.5">
               {popularPackages.map((item) => (
                 <li key={item.label}>
-                  <Link
+                  <a
                     href={item.href}
                     className="text-sm text-white/60 transition-colors hover:text-secondary"
                   >
                     {item.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
 
           <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white/90">
+            <h3 className="mb-4 font-sans text-xs font-semibold uppercase tracking-[0.12em] text-white/85">
               Perusahaan
             </h3>
             <ul className="space-y-2.5">
               {companyLinks.map((link) => (
                 <li key={link.href}>
-                  <Link
+                  <a
                     href={link.href}
                     className="text-sm text-white/60 transition-colors hover:text-secondary"
                   >
                     {link.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
 
           <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white/90">
+            <h3 className="mb-4 font-sans text-xs font-semibold uppercase tracking-[0.12em] text-white/85">
               Kontak
             </h3>
             <ul className="space-y-3 text-sm text-white/60">

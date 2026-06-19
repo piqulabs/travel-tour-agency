@@ -87,7 +87,7 @@ export default function Stats() {
               variants={fadeInUp}
               className="text-center"
             >
-              <p className="font-heading text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
+              <p className="font-heading text-3xl leading-none tracking-[-0.02em] text-white sm:text-4xl lg:text-[2.75rem]">
                 <AnimatedCounter
                   value={stat.value}
                   suffix={stat.suffix}

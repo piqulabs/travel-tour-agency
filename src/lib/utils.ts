@@ -18,6 +18,16 @@ export function formatPrice(amount: number): string {
 
 export const WHATSAPP_URL = `https://wa.me/${BRAND.whatsapp}`;
 
+/** Fixed navbar height — keep in sync with Navbar h-[4.75rem] */
+export const NAVBAR_OFFSET_PX = 76;
+
+export function scrollToSection(id: string) {
+  const el = document.getElementById(id);
+  if (!el) return false;
+  el.scrollIntoView({ behavior: "smooth", block: "start" });
+  return true;
+}
+
 export function formatPriceShort(amount: number): string {
   return `Rp${amount.toLocaleString("id-ID")}`;
 }
