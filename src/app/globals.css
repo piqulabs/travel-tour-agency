@@ -253,6 +253,25 @@
   .type-btn {
     @apply font-sans text-sm font-semibold tracking-[0.01em] sm:text-[15px];
   }
+  .cta-title {
+    @apply font-sans text-2xl font-bold leading-[1.15] tracking-[-0.02em] text-white text-balance sm:text-3xl sm:leading-[1.12] lg:text-4xl lg:leading-[1.1];
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
+  }
+  .cta-dark-title {
+    @apply text-[1.875rem] leading-[1.14] sm:text-[2.375rem] sm:leading-[1.12] lg:text-[2.75rem];
+    text-shadow:
+      0 0 48px rgba(255, 255, 255, 0.12),
+      0 2px 24px rgba(0, 0, 0, 0.45);
+  }
+  .cta-dark-eyebrow {
+    @apply mb-4 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-amber-300/90 sm:text-xs;
+  }
+  .cta-desc {
+    @apply mx-auto max-w-lg text-[15px] leading-[1.65] text-white/72 sm:text-base sm:leading-[1.6];
+  }
+  .cta-urgent-btn {
+    @apply h-12 min-w-[220px] bg-white font-sans text-sm font-semibold tracking-[0.01em] text-brand-text shadow-xl shadow-black/30 transition-all hover:bg-white hover:shadow-2xl hover:shadow-black/35 active:scale-[0.98] sm:h-[3.25rem] sm:min-w-[240px] sm:text-[15px];
+  }
   .mobile-cta-spacer {
     padding-bottom: calc(3.75rem + env(safe-area-inset-bottom, 0px));
   }

@@ -46,9 +46,10 @@ export default function Home() {
         <Contact />
         <CTASection
           variant="dark"
+          eyebrow="Kuota Terbatas"
           title="Kuota Juli & Agustus Hampir Penuh"
           description="Open trip Labuan Bajo tinggal sisa 4 kursi. Amankan slot Anda sekarang sebelum jadwal pilihan habis."
-          primaryLabel="Tanyakan Jadwal Keberangkatan"
+          primaryLabel="Amankan Kursi Sekarang"
         />
       </main>
       <Footer />
